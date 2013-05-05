@@ -21,6 +21,13 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         
+        <!-- fontello -->
+        <link rel="stylesheet" href="lib/fontello/css/.css">
+   	 	<link rel="stylesheet" href="lib/fontello/css/animation.css"><!--[if IE 7]>
+    	<link rel="stylesheet" href="lib/fontello/css/-ie7.css"><![endif]-->
+        
+        <!-- notify -->
+        <link rel='stylesheet' href='lib/jquery-notify/ui.notify.css'/>
         <!-- mine -->
         <link rel="stylesheet" href="css/style.css"/>
         
@@ -49,7 +56,46 @@
         	<!-- push -->
         	<div id="push"></div><!-- /push -->
         </div><!-- /wrapper -->
-
+        
+        <div id="notification" style="display:none">
+			<div id="notify-template">
+				<a class="ui-notify-cross ui-notify-close" href="#">x</a>
+				<h1>#{title}</h1>
+				<p>#{text}</p>
+			</div>
+			<div id="error-template" style="padding: 10px; -webkit-box-shadow: rgb(152, 0, 0) 0px 0px 6px; box-shadow: rgb(152, 0, 0) 0px 0px 6px; background-color:#fef1ec; border:1px solid #cd0a0a; color:#cd0a0a;">
+				<a class="ui-notify-cross ui-notify-close" href="#">x</a>
+				<h1><i class="icon-warning-sign" style="top:2.5px;position:relative;"></i>&nbsp;#{title}</h1>
+				<p>#{text}</p>
+			</div>
+		</div>
+		
+		<div class='overlay'>
+			<div class='overlay-inner'>
+				<div class='overlay-inner2'>
+				To:<br>
+				<div class='overlay-name'>
+				
+				</div>
+				Subject:<br>
+				<input type='text' placeholder='Quick Follow Up' class='overlay-subject'/>
+				Message:<br>
+				<textarea id="overlay-message" rows='6' cols='30'>
+				
+				</textarea>
+				<br>
+				<div class='row-fluid' style='text-align:center' placeholder='test'>
+					<div class='span6'>
+						<a id='overlay-send'>Send</a>
+					</div>
+					<div class='span6'>
+						<a id='overlay-cancel'>Cancel</a>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div id='musicPlayerSpot'></div>
         <!-- js -->
         <script type="text/javascript" src="js/main/main.js"></script>
         
@@ -66,5 +112,10 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-    </body>
+     
+     	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+     	
+     
+        
+     </body>
 </html>

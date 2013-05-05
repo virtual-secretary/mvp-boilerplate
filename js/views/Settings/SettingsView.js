@@ -25,6 +25,9 @@ define([
 			},
 			onShow : function() {
 				this.render();
+				$(".socialConnect-btn").click(function(){
+					$(this).append("&nbsp;&nbsp;<i class='icon-ok'/>");
+				});
 			}
 		});
 		

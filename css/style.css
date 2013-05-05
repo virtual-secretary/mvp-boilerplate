@@ -36,6 +36,9 @@ body  {
 	position:relative;
 	min-height:500px;
 }
+a.brand {
+	width:103px;
+}
 
 /* landing / login page */
 
@@ -43,11 +46,26 @@ body  {
 	margin-left: auto;
 	margin-rigth: auto;
 	text-align : center;
-	top:100px;
+	position:relative;
+	top:-40px;
+}
+
+.landing-logo img {
+	width:25%;
+}
+
+.landing-logo #landing-shrley{
+	top:-10px;
 	position:relative;
 }
 
-a.landing-btn {
+.landing-logo .subNote {
+	color:#fff;
+	font-size: 20px;
+	margin-bottom:10px;
+}
+
+a.landing-btn, a.socialConnect-btn,  a.popUp-btn, #overlay-send, #overlay-cancel {
 	font-size:20px;
 	padding: 15px 60px;
 	width: 100%;
@@ -69,7 +87,7 @@ a.landing-btn {
 	-webkit-text-decoration:none;
 }
 
-a.landing-btn:hover {
+a.landing-btn:hover, a.socialConnect-btn:hover, a.popUp-btn:hover, #overlay-send:hover, #overlay-cancel:hover {
 	background-image: -webkit-linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
 	background-image: -moz-linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
 }
@@ -314,6 +332,41 @@ p label {
 	font-size: 20px;
 }
 
+.card  .quickFollow {
+	text-align:center;
+}
+
+
+/* settings page */
+.settings-body {
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	top:100px;
+	position:relative;
+}
+
+.settings-body .connect-tools > div{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.settings-body .connect-tools > div:first-child a {
+	font-size:13px;
+}
+
+.settings-body .settings-title {
+	color: white;
+	font-size:20px;
+}
+
+.icon-ok {
+	color : #66CD00;
+}
+
+
+/*boostrap css fixes */
+
 @media (max-width: 767px) {
 	body {
 		padding-right:0 !important;
@@ -329,4 +382,33 @@ p label {
 	}
 }
 
+/*overlay */
+div.overlay {
+	position:absolute;
+	width:100%;
+	z-index: 222;
+	display:none;
+}
+
+div.overlay-inner {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	top:100px;
+	width:400px;
+	background-color:white;
+	border:1px solid black;
+	position:relative;
+	padding: 10px 20px;
+}
+
+div.overlay-inner2 {
+	text-align:left;
+}
+
+/* twitter */
+
+.twitter-follow-button {
+	font-size:12px;
+}
 

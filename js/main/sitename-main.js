@@ -15,7 +15,8 @@ require.config({
 		marionette : "/lib/marionette/marionette.min",
 		"backbone.babysitter" : "/lib/backbone.babysitter/Backbone.babysitter",
 		"backbone.wreqr" : "/lib/backbone.Wreqr/Backbone.Wreqr",
-		"bootstrap" : "/lib/bootstrap/bootstrap.min"
+		"bootstrap" : "/lib/bootstrap/bootstrap.min"//,
+		//"jquery-notify" : "/lib/jquery-notify/src/jquery.notify.min"
 	},
 	
 	/*
@@ -30,6 +31,9 @@ require.config({
 		
 		jquery: ["json"],
 		
+	/*	'jquery-notify' : {
+			deps : ['jquery']
+		},*/
 		underscore: {
 			deps: ["json"],
 			exports: "_"
