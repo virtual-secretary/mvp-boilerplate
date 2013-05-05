@@ -26,6 +26,20 @@ define([
 			},
 			onShow : function() {
 				this.render();
+				
+				$(".landing-btn").click(function(){
+					$.ajax({
+						type : "POST",
+						url : "/api/login",
+						data : {
+							username : $("input.username").val(),
+							password : $("input.password").val(),
+							remember : ($("input[type='checkbox']").prop("checked")? true : false)
+						}
+					}).always(function(data)){
+						
+					}
+				});
 			}
 		});
 		
