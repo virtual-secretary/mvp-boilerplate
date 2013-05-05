@@ -13,12 +13,13 @@ define([
         //TEMPLATES
         "text!tpl/MeetingCards/Card.mustache",
         "text!tpl/MeetingCards/Listing.mustache",
+        "text!tpl/MeetingCards/demo.mustache"
         
         //NO EXPORT
         //"jquery-notify"
 ], function(
 		$, Mustache, Marionette, 
-		cardTpl, listingTpl ) {
+		cardTpl, listingTpl, demoTpl ) {
 			var MeetingCardView = Marionette.Region.extend({
 				initialize  : function(options) {
 					options = options || {};
@@ -32,12 +33,12 @@ define([
 					this.collection.fetch();
 				},
 				render : function() {
-					
+					/*
 					var parent = {
 							cards : Mustache.render(cardTpl) + Mustache.render(cardTpl)
-					}
+					}*/
 					
-					this.el.innerHTML = Mustache.render(listingTpl, parent);
+					this.el.innerHTML = Mustache.render(demoTpl);//, parent);
 					return this;
 				},
 				renderCards : function() {

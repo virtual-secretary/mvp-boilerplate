@@ -3,13 +3,13 @@
 	<div class='card-main'>
 		<div class='card-header row-fluid'>
 			<div class='span4'>
-				2:00PM	|
+				{{meetingTime}}	|
 			</div>
 			<div class='span4'>
-				VC Meeting
+				{{Subject}}
 			</div>
 			<div class='span4'>
-				@1355 Market St, SF
+				@{{location}}
 			</div>
 		</div>
 		<div class='line row-fluid'></div>
@@ -20,13 +20,13 @@
 		 	</div>
 		 	<div class='span8 row-fluid'>
 		 		<div class='span12'>
-		 			Alfred Kam
+		 			{{name}}
 		 		</div>
 		 		<div class='span12'>
-		 			Co-Founder at Appfuel
+		 			{{position}}
 		 		</div>
 		 		<div class='span12'>
-		 			Toronto
+		 			{{currentLocation}}
 		 		</div>
 		 		<div class='span12'>
 		 			<a href="https://twitter.com/alfredkam" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @alfredkam</a>
