@@ -253,6 +253,11 @@ p label {
 	text-align:center;
 }
 
+.card .card-header div {
+	font-size:30px;
+	padding:10px 0;
+}
+
 .card .card-header div:first-child {
 	font-size:40px;
 	padding: 5px 10px;
