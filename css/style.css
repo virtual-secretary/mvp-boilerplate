@@ -1,0 +1,156 @@
+body  {
+	background: #1c2029 url(../img/linen.png) repeat ;
+	margin:0px;
+	font: normal 12px HelveticaNeue, Helvetica, Arial;
+}
+@font-face {
+    font-family: 'Icons';
+    src: url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.eot');
+    src: url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.woff') format('woff'),
+         url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.ttf') format('truetype'),
+         url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.svg#iconSweetsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#content {
+	
+	font: normal 12px HelveticaNeue, Helvetica, Arial;
+	-webkit-text-stroke: 1px transparent;
+	overflow-x: hidden;
+	-webkit-backface-visibility: hidden;
+	background: -webkit-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: -moz-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: -o-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: -ms-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: -khtml-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	width: 100%;
+	height: 100%;
+	position:absolute;
+}
+
+#main-body {
+	top:70px;
+	position:relative;
+	min-height:500px;
+}
+
+/* landing page */
+
+.landing {
+	margin-left: auto;
+	margin-rigth: auto;
+	text-align : center;
+	top:100px;
+	position:relative;
+}
+
+a.landing-btn {
+	font-size:20px;
+	padding: 15px 60px;
+	width: 100%;
+	margin-top: 20px;
+	height: 45px;
+	font: bold 14px/45px HelveticaNeue, Helvetica, Arial;
+	color: rgba(0,0,0,0.75);
+	text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+	-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.2), 0px -1px 0px rgba(255,255,255,0.3) inset;
+	-moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.2), 0px -1px 0px rgba(255,255,255,0.3) inset;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.2), 0px -1px 0px rgba(255,255,255,0.3) inset;
+	border-radius: 4px;
+	border: 0px solid;
+	background-image: -webkit-linear-gradient(transparent, rgba(0,0,0,0.35));
+	background-image: -moz-linear-gradient(transparent, rgba(0,0,0,0.35));
+	background-color: #FFD000;
+	cursor: pointer;
+	text-decoration:none;
+	-webkit-text-decoration:none;
+}
+
+a.landing-btn:hover {
+	background-image: -webkit-linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+	background-image: -moz-linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+}
+
+
+/* Listing Css */
+
+.listing-date {
+	left:5%;
+	position:relative;
+	font-size: 50px;
+	color:white;
+}
+
+
+/* Card Css */
+
+.card {
+	background-color: #FFF;
+	border-radius: 3px;
+	margin:10px 20px;
+}
+
+.card .card-header div {
+	text-align:center;
+}
+
+.card .card-header div:first-child {
+	font-size:40px;
+	padding: 5px 10px;
+
+}
+
+.card .card-header div:last-child {
+	font-size: 30px;
+	padding: 10px 10px;
+}
+
+.card .line {
+	height:1px;
+	width:100%;
+	background-color: #333;
+}
+
+.card .miniLine {
+	width:50%;
+	margin-left:25%;
+	border-bottom: 1px dashed #333;
+}
+
+.card .card-body > div:first-child {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+.card .card-body img {
+	margin:10px 0;
+	height:136px;
+	width:136px;
+	position:relative;
+}
+
+.card .card-body > div:last-child {
+	margin-top:10px;
+	text-align:center;
+	font-size:20px;
+}
+
+.card .card-body > div:last-child > div:first-child {
+	font-size: 30px;
+}
+
+.card .card-extended {
+	display:none;
+}
+
+.card .card-extended .subTitle {
+	margin-top:10px;
+	text-align:center;
+	font-size: 20px;
+}
+
+
