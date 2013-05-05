@@ -10,34 +10,33 @@ define([
         //VIEWS
         "js/views/HeaderView",
 		"js/views/FooterView",
+		"js/views/MeetingCards/MeetingCardsView",
         //MODULES
         "js/util/QueryStringUtils",
         //NO EXPORTS
 		"bootstrap"
 ], function(
 		$, Backbone, Marionette,
-		HeaderView, FooterView,
+		HeaderView, FooterView, MeetingCardsView,
 		QueryStringUtils
 	) {
 		var QueryStringUtils = new QueryStringUtils();
 		
 		var Router = Backbone.Router.extend({
-			routes:{
-				"connect" : "connect",
-				"login" : "login",
-				"meetings" : "meetings",
-				"" : "meetings"
+			routes: {
+				"meetings" : "meeting",
+				"" : "meeting"
 			},
 			initialize: function(){
 				var self = this;
-				var app = new Marionette.Application();
+				this.app = new Marionette.Application();
 				
 				//$("#content").attr("id","main-body");
 				
 				//if(!this.checkLogin()) {
 				//		window.location = "/#/login";
 				//} else {
-					this.views = {
+					var views = {
 							header : new HeaderView({
 								//model : self.user,
 								el : $("#header")[0]
@@ -51,46 +50,19 @@ define([
 					this.views.footer.render();
 					*/
 				
-				app.addRegions({
+				self.app.addRegions({
 					header : "#header",
 					footer : "#footer",
 					body : "#main-body"
 				});
 				
+				
 				//app.header.attachView(this.views.header);
-				app.header.show(this.views.header);
-				app.footer.show(this.views.footer)
-				//app.footer.attachView(this.views.footer);
-				
-				app.on('initalize:after', function(){
-					Backbone.history.start();
-				});
-				
-				/*
-				this.views = {
-						header : new HeaderView({
-							//model : self.user,
-							//el : self.$header.get(0)
-						}),
-						footer : new FooterView({
-							//el : self.$footer.get(0)
-						})
-				};
-				
-				this.regions = {
-					header : new Marionette.Region({
-						el : "#header"
-					}),
-					footer : new Marionette.Region({
-						el : "#footer"
-					}),
-					body : new Marionette.Region({
-						el : "#main-body"
-					}) 
-				};
-				
-				this.region.header.show(this.views.header);
-				this.region.footer.show(this.views.footer); */
+				self.app.header.show(views.header);
+				self.app.footer.show(views.footer);
+				//self.app.on('initalize:after', function(){
+				//	Backbone.history.start();
+				//});
 	
 					/* need to include a calander library here */
 				//}
@@ -101,8 +73,12 @@ define([
 			login : function() {
 				
 			},
-			meetings : function() {
+			meeting : function() {
 				var self = this;
+				var view = new MeetingCardsView({
+					el : $("#main-body")[0]
+				});	
+				self.app.body.show(view);
 			},
 			connect : function() {
 				

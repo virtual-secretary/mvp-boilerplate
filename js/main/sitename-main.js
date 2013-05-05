@@ -61,7 +61,7 @@ require(["js/util/WebConsoleUtils", "backbone", "js/Router"], function(WebConsol
 	});
 
 	var router = new Router();
-	//Backbone.history.start();
+	Backbone.history.start();
 	
 	consoleUtils.initConsole(/*debgu flag here*/);
 });
