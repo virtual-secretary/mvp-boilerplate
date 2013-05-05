@@ -12,10 +12,10 @@ define([
         
         //TEMPLATES
         "text!tpl/MeetingCards/Card.mustache",
-        "text!tpl/MeetingCards/Listing.mustache"
+        "text!tpl/MeetingCards/Listing.mustache",
         
         //NO EXPORT
-        
+        //"jquery-notify"
 ], function(
 		$, Mustache, Marionette, 
 		cardTpl, listingTpl ) {
@@ -60,6 +60,8 @@ define([
 							$(element).parent().children(".card-extended").slideToggle();
 							
 					});
+					//$("#notification").notify();
+					//$("#notification").notify("create", { title : "hello" , text : "You have a meeting coming up" });
 				}
 			});
 			

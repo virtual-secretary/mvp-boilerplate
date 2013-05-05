@@ -36,6 +36,9 @@ body  {
 	position:relative;
 	min-height:500px;
 }
+a.brand {
+	width:103px;
+}
 
 /* landing / login page */
 
@@ -335,6 +338,8 @@ p label {
 	margin-left:auto;
 	margin-right:auto;
 	text-align: center;
+	top:100px;
+	position:relative;
 }
 
 .settings-body .connect-tools > div{
