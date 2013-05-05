@@ -37,7 +37,7 @@ body  {
 	min-height:500px;
 }
 
-/* landing page */
+/* landing / login page */
 
 .landing {
 	margin-left: auto;
@@ -74,6 +74,162 @@ a.landing-btn:hover {
 	background-image: -moz-linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
 }
 
+input[type="text"], input[type="password"], textarea {
+	border: 1px solid #bbb; 
+	background: -webkit-linear-gradient(rgba(255,255,255,0.2), white);
+	background: -moz-linear-gradient(rgba(255,255,255,0), white);
+	height: 40px;
+	color: #888;
+	border-radius: 2px;
+	font-size: 12px;
+	display: block;
+	width: 100%;
+	font: normal 12px HelveticaNeue, Helvetica, Arial;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.input input{
+	border: 1px solid #555;
+	background : rgba(0,0,0,0.3);
+	
+	position : relative;
+	width:400px;
+}
+
+
+.input {
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+input.username {
+	font-weight:bold;
+	color:white;
+	margin-bottom:0 !important;
+}
+
+input {
+	background: transparent;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 0px;
+	height: auto;
+	width:100%;
+	font-size:15px;
+}
+
+
+input {
+	border-radius:0px;
+	border-top:none !important;
+}
+
+input[type="text"]:last-child {
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+input[type="text"]:first-child {
+	border-top:1px solid #555 !important;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.input .checkbox2 span {
+	position :relative;
+	color: #666;
+	left: 50px;
+	top:-17px;
+}
+
+/* SQUARED THREE */
+.squaredThree {
+	width:1px;
+	margin:20px 20px;
+	position: relative;
+}
+
+.squaredThree label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	border-radius: 4px;
+
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
+
+	background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -o-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
+	background: linear-gradient(top, #222 0%, #45484d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+}
+
+.squaredThree label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 4px;
+	left: 4px;
+	border: 3px solid #fcfff4;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.squaredThree label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+
+.squaredThree input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+input#squaredThree {
+	visibility:hidden
+}
+
+p label {
+	color: orange;
+	font-weight:bold;
+
+}
+
+
+
 
 /* Listing Css */
 
@@ -95,6 +251,11 @@ a.landing-btn:hover {
 
 .card .card-header div {
 	text-align:center;
+}
+
+.card .card-header div {
+	font-size:30px;
+	padding:10px 0;
 }
 
 .card .card-header div:first-child {
@@ -151,6 +312,21 @@ a.landing-btn:hover {
 	margin-top:10px;
 	text-align:center;
 	font-size: 20px;
+}
+
+@media (max-width: 767px) {
+	body {
+		padding-right:0 !important;
+		padding-left:0 !important;
+	}
+	
+	.navbar .brand {
+		margin: 0 0 0 30px !important;
+	}
+	
+	.navbar .btn-navbar {
+		margin-right: 25px !important;
+	}
 }
 
 

@@ -20,8 +20,16 @@ define([
 		$, Mustache, Marionette, 
 		cardTpl, listingTpl ) {
 			var MeetingCardView = Marionette.Region.extend({
-				initalize  : function() {
+				initialize  : function(options) {
 					options = options || {};
+					
+					console.log(options);
+					this.collection = options.collection;
+					//console.log(this.constructor.);
+					//this.constructor.call(this, options);
+					
+					this.listenTo(this.collection, "reset", this.render);
+					this.collection.fetch();
 				},
 				render : function() {
 					
@@ -30,11 +38,18 @@ define([
 					}
 					
 					this.el.innerHTML = Mustache.render(listingTpl, parent);
-					//console.log(this.el.html());
-					
-					
-					
 					return this;
+				},
+				renderCards : function() {
+					var CardLib = this.collection.toJSON();
+					var data = [];
+					for(var i in CardLib) {
+						data.push({
+							
+						});
+					}
+					
+					return data;
 				},
 				onShow : function() {
 					this.render();

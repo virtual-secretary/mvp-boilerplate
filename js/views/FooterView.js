@@ -19,6 +19,7 @@ define([
 			initalize  : function() {
 				options = options || {};
 				options.tpl = tpl;
+				this.constructor.__super__.initialize.call(this, options);
 				
 			},
 			render : function() {

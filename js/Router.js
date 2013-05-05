@@ -6,19 +6,21 @@ define([
         "backbone",
         "marionette",
         //MODELS
-        
+        "js/models/Model",
         //VIEWS
         "js/views/HeaderView",
 		"js/views/FooterView",
 		"js/views/MeetingCards/MeetingCardsView",
 		"js/views/Home/HomeView",
+		"js/views/Settings/SettingsView",
         //MODULES
         "js/util/QueryStringUtils",
         //NO EXPORTS
 		"bootstrap"
 ], function(
 		$, Backbone, Marionette,
-		HeaderView, FooterView, MeetingCardsView, HomeView,
+		CardModel,
+		HeaderView, FooterView, MeetingCardsView, HomeView, SettingsView,
 		QueryStringUtils
 	) {
 		var QueryStringUtils = new QueryStringUtils();
@@ -26,6 +28,7 @@ define([
 		var Router = Backbone.Router.extend({
 			routes: {
 				"meetings" : "meeting",
+				"settings" : "settings",
 				"" : "default"
 			},
 			initialize: function(){
@@ -65,6 +68,13 @@ define([
 				//app.header.attachView(this.views.header);
 				self.app.header.show(views.header);
 				self.app.footer.show(views.footer);
+				
+				var CardLibrary = Backbone.Collection.extend({
+						model : CardModel,
+						url : '/data'
+				});	
+				
+				this.myCards = new CardLibrary();
 				//self.app.on('initalize:after', function(){
 				//	Backbone.history.start();
 				//});
@@ -72,18 +82,21 @@ define([
 					/* need to include a calander library here */
 				//}
 			},
-			about : function() {
-			
-			},
-			login : function() {
-				
-			},
 			meeting : function() {
 				var self = this;
 				self.$header.style.display = "block";
 				var view = new MeetingCardsView({
+					collection : self.myCards,
 					el : self.$body
 				});	
+				self.app.body.show(view);
+			},
+			settings : function() {
+				var self = this;
+				self.$header.style.display = "block";
+				var view = new SettingsView({
+					el : self.$body
+				});
 				self.app.body.show(view);
 			},
 			default : function() {
