@@ -24,9 +24,9 @@ define([
 				summary : "",
 				description : "",
 				timeZone : "",
-				googleReminders = [],
-				nextPageToken = "",
-				googleEvent = []
+				googleReminders : [],
+				nextPageToken : "",
+				googleEvent : [] 
 				
 			};
 		}
