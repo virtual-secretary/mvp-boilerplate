@@ -28,6 +28,7 @@ define([
 				this.render();
 				$("#musicPlayerSpot").html("<audio autoplay='autoplay' id='game-audio' preload='auto' autobuffer style='display:none'><source src='sound/Welcome%20message.mp3' />Your browser does not support audio element</audio>");
 				$(".landing-btn").click(function(){
+						/*
 					$.ajax({
 						type : "POST",
 						url : "/api/login",
@@ -38,9 +39,21 @@ define([
 							callback : "/#meetings"
 						}
 					}).always(function(data){
-						console.log(data);
+						//console.log(data);
 						
-					});
+						
+						
+					}); */
+					//window.location.href = "#meetings";
+						
+					if(($("input.username").val() == "rex") && ($("input.password").val() == "somepass")) {
+						window.setTimeout(function(){
+							window.location.href = "#meetings";
+						},500)
+					} else {
+						alert("incorrect credentials, please try again!");
+					}
+					
 				});
 			}
 		});
