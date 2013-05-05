@@ -25,12 +25,8 @@ define([
 					
 				},
 				render : function() {
-					console.log("test");
-					//console.log(Mustache.render(tpl));
 					
-					this.el.innerHTML = Mustache.render(tpl);
-					//console.log(this.el.html());
-					
+					this.el.innerHTML = Mustache.render(tpl);			
 					return this;
 				},
 				onShow : function() {

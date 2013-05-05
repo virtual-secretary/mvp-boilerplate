@@ -22,8 +22,6 @@ define([
 				
 			},
 			render : function() {
-				console.log("test");
-
 				var d = new Date();
 				var parent = {
 						year : d.getFullYear()

@@ -11,22 +11,25 @@ define([
         //VIEWS
         
         //TEMPLATES
-        "text!tpl/MeetingCards/Card.mustache"
+        "text!tpl/MeetingCards/Card.mustache",
+        "text!tpl/MeetingCards/Listing.mustache"
         
         //NO EXPORT
         
 ], function(
 		$, Mustache, Marionette, 
-		tpl ) {
+		cardTpl, listingTpl ) {
 			var MeetingCardView = Marionette.Region.extend({
 				initalize  : function() {
 					options = options || {};
-					options.tpl = tpl;
 				},
 				render : function() {
-					//console.log(Mustache.render(tpl));
-					console.log("asd");
-					this.el.innerHTML = Mustache.render(tpl);
+					
+					var parent = {
+							cards : Mustache.render(cardTpl) + Mustache.render(cardTpl)
+					}
+					
+					this.el.innerHTML = Mustache.render(listingTpl, parent);
 					//console.log(this.el.html());
 					
 					
@@ -39,7 +42,6 @@ define([
 							e.stopPropagation();
 							var self = this;
 							var element = e.currentTarget;
-							
 							$(element).parent().children(".card-extended").slideToggle();
 							
 					});

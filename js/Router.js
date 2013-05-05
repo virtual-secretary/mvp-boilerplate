@@ -11,13 +11,14 @@ define([
         "js/views/HeaderView",
 		"js/views/FooterView",
 		"js/views/MeetingCards/MeetingCardsView",
+		"js/views/Home/HomeView",
         //MODULES
         "js/util/QueryStringUtils",
         //NO EXPORTS
 		"bootstrap"
 ], function(
 		$, Backbone, Marionette,
-		HeaderView, FooterView, MeetingCardsView,
+		HeaderView, FooterView, MeetingCardsView, HomeView,
 		QueryStringUtils
 	) {
 		var QueryStringUtils = new QueryStringUtils();
@@ -25,11 +26,15 @@ define([
 		var Router = Backbone.Router.extend({
 			routes: {
 				"meetings" : "meeting",
-				"" : "meeting"
+				"" : "default"
 			},
 			initialize: function(){
 				var self = this;
 				this.app = new Marionette.Application();
+				
+				this.$header = $("#header")[0];
+				this.$footer = $("#footer")[0];
+				this.$body = $("#main-body")[0];
 				
 				//$("#content").attr("id","main-body");
 				
@@ -39,10 +44,10 @@ define([
 					var views = {
 							header : new HeaderView({
 								//model : self.user,
-								el : $("#header")[0]
+								el : self.$header
 							}),
 							footer : new FooterView({
-								el : $("#footer")[0]//self.$footer.get(0)
+								el : self.$footer
 							})
 					};
 					/*
@@ -75,13 +80,20 @@ define([
 			},
 			meeting : function() {
 				var self = this;
+				self.$header.style.display = "block";
 				var view = new MeetingCardsView({
-					el : $("#main-body")[0]
+					el : self.$body
 				});	
 				self.app.body.show(view);
 			},
-			connect : function() {
+			default : function() {
 				
+				var self = this;
+				self.$header.style.display = "none";
+				var view = new HomeView({
+					el : self.$body
+				});
+				self.app.body.show(view);
 			}
 		});
 		
