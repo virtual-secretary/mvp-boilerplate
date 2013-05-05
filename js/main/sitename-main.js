@@ -11,7 +11,11 @@ require.config({
 		jquery: "lib/jquery/jquery-1.9.1",
 		underscore: "lib/underscore/underscore",
 		backbone: "lib/backbone/backbone",
-		mustache: "lib/mustache/mustache"
+		mustache: "lib/mustache/mustache",
+		marionette : "/lib/marionette/marionette.min",
+		"backbone.babysitter" : "/lib/backbone.babysitter/backbone.babysitter",
+		"backbone.wreqr" : "/lib/backbone.Wreqr/Backbone.Wreqr",
+		"bootstrap" : "/lib/bootstrap/bootstrap.min"
 	},
 	
 	/*
@@ -30,17 +34,22 @@ require.config({
 			deps: ["json"],
 			exports: "_"
 		},
-		
 		backbone: {
 			deps: ["json", "underscore", "jquery"],
 			exports: "Backbone"
 		},
-		
-		mustache: ["json"]
+		marionette : {
+			deps : ["json", "jquery", "underscore","backbone"],
+			exports : "Marionette"
+		},
+		mustache: ["json"],
+		bootstrap : {
+			deps : ["jquery"]
+		}
 	}
 });
 
-require(["js/util/WebConsoleUtils"], function(WebConsoleUtils){
+require(["js/util/WebConsoleUtils", "backbone", "js/Router"], function(WebConsoleUtils, Backbone, Router){
 	
 	//TODO: Starting point
 	var config = window.sitename.getConfig();
@@ -50,6 +59,9 @@ require(["js/util/WebConsoleUtils"], function(WebConsoleUtils){
 	var consoleUtils = new WebConsoleUtils({
 		//debug: debug flag here
 	});
+
+	var router = new Router();
+	//Backbone.history.start();
 	
 	consoleUtils.initConsole(/*debgu flag here*/);
 });
