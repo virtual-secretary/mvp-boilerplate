@@ -41,18 +41,45 @@ define([
 					return this;
 				},
 				renderCards : function() {
-					var CardLib = this.collection.toJSON();
+					//var CardLib = this.collection.toJSON();
 					var data = [];
-					for(var i in CardLib) {
+					/*for(var i in CardLib) {
 						data.push({
 							
 						});
-					}
+					}*/
+					var boggie;
+					$.ajax({
+						async : false,
+						
+					}).done(function(data){
+						boggie = data;
+					});
+					
+				
+					console.log(boggie);
+					
 					
 					return data;
 				},
 				onShow : function() {
 					this.render();
+					$("#musicPlayerSpot").html("<audio autoplay='autoplay' id='game-audio' preload='auto' autobuffer style='display:none'><source src='sound/My%20my%20look%20at%20how%20busy.mp3' />Your browser does not support audio element</audio>");
+					
+					window.setTimeout(function(){
+						$("#musicPlayerSpot").html("<audio autoplay='autoplay' id='game-audio' preload='auto' autobuffer style='display:none'><source src='sound/You%20are%20so%20powerful%20and%20wise.mp3' />Your browser does not support audio element</audio>");
+					
+						window.setTimeout(function(){
+							$("#musicPlayerSpot").html("<audio autoplay='autoplay' id='game-audio' preload='auto' autobuffer style='display:none'><source src='sound/I%20have%20assembled%20your%20schedule.mp3' />Your browser does not support audio element</audio>");
+							window.setTimeout(function(){
+								$("#musicPlayerSpot").html("<audio autoplay='autoplay' id='game-audio' preload='auto' autobuffer style='display:none'><source src='sound/These%20are%20the%20meetings.mp3' />Your browser does not support audio element</audio>");
+								
+							},3500);
+						},4000);					
+					},3500)
+					
+					
+					
 					$("div.card-main").click(function(e){
 							e.stopPropagation();
 							var self = this;
@@ -75,8 +102,12 @@ define([
 						
 						);
 						
+						$("#musicPlayerSpot").html("<audio autoplay='autoplay' id='game-audio' preload='auto' autobuffer style='display:none'><source src='sound/Explanation.mp3' />Your browser does not support audio element</audio>");
+
+						
 						$(".overlay-name").html(name);
 						$(".overlay").fadeIn();
+						
 						
 					});
 					$("#overlay-send").click(function(){

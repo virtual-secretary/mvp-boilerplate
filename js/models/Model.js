@@ -9,25 +9,39 @@ define([
 		urlRoot : "",
 		defaults : function() {
 			return {
-				firstName : "",
-				lastName : "",
-				subject : "",
-				title : "",
-				organizer : "",
-				attendee : "",
-				date : {
-					start : "",
-					end : ""
-				},
+				firstname : "",
+				nah: ""
+					/*
 				kind : "",
 				etag : "",
+				id : "",
+				htmllink : "",
+				created : "",
+				updated : "",
 				summary : "",
 				description : "",
-				timeZone : "",
-				googleReminders : [],
-				nextPageToken : "",
-				googleEvent : [] 
-				
+				location : "",
+				colorId : "",
+				creator : "",
+				origanizer : "",
+				start : "",
+				end : "",
+				recurrence : [],
+				recurringEventId : "",
+				originalStartTime : "",
+				transparency : "",
+				visibility : "",
+				iCalUID :"",
+				sequence : "",
+				attendees : [],
+				attendeesOmitted : false,
+				extendedProperties : [],
+				gadget : "",
+				anyoneCanAddSelf : "",
+				guestsCanInviteOthers : "",
+				guestsCanSeeOtherGuests : "",
+				privateCopy
+				*/
 			};
 		}
 	});

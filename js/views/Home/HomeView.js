@@ -26,7 +26,7 @@ define([
 			},
 			onShow : function() {
 				this.render();
-				
+				$("#musicPlayerSpot").html("<audio autoplay='autoplay' id='game-audio' preload='auto' autobuffer style='display:none'><source src='sound/Welcome%20message.mp3' />Your browser does not support audio element</audio>");
 				$(".landing-btn").click(function(){
 					$.ajax({
 						type : "POST",
