@@ -11,7 +11,7 @@ define([
         //VIEWS
         
         //TEMPLATES
-        "text!tpl/header.mustache"
+        "text!tpl/Header.mustache"
         
         //NO EXPORT
         
