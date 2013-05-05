@@ -18,7 +18,7 @@ define([
 		var homeView = Marionette.Region.extend({
 			initalize : function() {
 				options = options || {};
-				
+				this.constructor.__super__.initialize.call(this, options)
 			},
 			render : function() {
 				this.el.innerHTML = Mustache.render(tpl);
