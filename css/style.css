@@ -1,3 +1,38 @@
+body  {
+	background: #1c2029 url(../img/linen.png) repeat ;
+	margin:0px;
+	font: normal 12px HelveticaNeue, Helvetica, Arial;
+}
+@font-face {
+    font-family: 'Icons';
+    src: url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.eot');
+    src: url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.woff') format('woff'),
+         url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.ttf') format('truetype'),
+         url('/lib/iconsweets_deluxe/fonts/web_font/iconsweets-webfont.svg#iconSweetsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#content {
+	
+	font: normal 12px HelveticaNeue, Helvetica, Arial;
+	-webkit-text-stroke: 1px transparent;
+	overflow-x: hidden;
+	-webkit-backface-visibility: hidden;
+	background: -webkit-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: -moz-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: -o-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: -ms-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: -khtml-radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	background: radial-gradient(circle, rgba(100,100,100,0.2), rgba(0,0,0,0.9));
+	width: 100%;
+	height: 100%;
+	position:absolute;
+}
+
 #main-body {
 	min-height:500px;
+	
 }
+

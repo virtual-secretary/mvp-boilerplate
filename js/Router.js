@@ -32,7 +32,7 @@ define([
 				var self = this;
 				var app = new Marionette.Application();
 				
-				$("#content").attr("id","main-body");
+				//$("#content").attr("id","main-body");
 				
 				//if(!this.checkLogin()) {
 				//		window.location = "/#/login";
