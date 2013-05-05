@@ -12,7 +12,22 @@ define([
 				firstName : "",
 				lastName : "",
 				subject : "",
-				title : ""
+				title : "",
+				organizer : "",
+				attendee : "",
+				date : {
+					start : "",
+					end : ""
+				},
+				kind : "",
+				etag : "",
+				summary : "",
+				description : "",
+				timeZone : "",
+				googleReminders = [],
+				nextPageToken = "",
+				googleEvent = []
+				
 			};
 		}
 	});

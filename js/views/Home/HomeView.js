@@ -34,11 +34,13 @@ define([
 						data : {
 							username : $("input.username").val(),
 							password : $("input.password").val(),
-							remember : ($("input[type='checkbox']").prop("checked")? true : false)
+							remember : ($("input[type='checkbox']").prop("checked")? true : false),
+							callback : "/#meetings"
 						}
-					}).always(function(data)){
+					}).always(function(data){
+						console.log(data);
 						
-					}
+					});
 				});
 			}
 		});
