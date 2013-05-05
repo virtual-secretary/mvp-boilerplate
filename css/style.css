@@ -65,7 +65,7 @@ a.brand {
 	margin-bottom:10px;
 }
 
-a.landing-btn, a.socialConnect-btn {
+a.landing-btn, a.socialConnect-btn,  a.popUp-btn, #overlay-send, #overlay-cancel {
 	font-size:20px;
 	padding: 15px 60px;
 	width: 100%;
@@ -87,7 +87,7 @@ a.landing-btn, a.socialConnect-btn {
 	-webkit-text-decoration:none;
 }
 
-a.landing-btn:hover, a.socialConnect-btn:hover {
+a.landing-btn:hover, a.socialConnect-btn:hover, a.popUp-btn:hover, #overlay-send:hover, #overlay-cancel:hover {
 	background-image: -webkit-linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
 	background-image: -moz-linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
 }
@@ -332,6 +332,10 @@ p label {
 	font-size: 20px;
 }
 
+.card  .quickFollow {
+	text-align:center;
+}
+
 
 /* settings page */
 .settings-body {
@@ -378,4 +382,33 @@ p label {
 	}
 }
 
+/*overlay */
+div.overlay {
+	position:absolute;
+	width:100%;
+	z-index: 222;
+	display:none;
+}
+
+div.overlay-inner {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	top:100px;
+	width:400px;
+	background-color:white;
+	border:1px solid black;
+	position:relative;
+	padding: 10px 20px;
+}
+
+div.overlay-inner2 {
+	text-align:left;
+}
+
+/* twitter */
+
+.twitter-follow-button {
+	font-size:12px;
+}
 

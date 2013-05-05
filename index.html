@@ -69,6 +69,32 @@
 				<p>#{text}</p>
 			</div>
 		</div>
+		
+		<div class='overlay'>
+			<div class='overlay-inner'>
+				<div class='overlay-inner2'>
+				To:<br>
+				<div class='overlay-name'>
+				
+				</div>
+				Subject:<br>
+				<input type='text' placeholder='Quick Follow Up' class='overlay-subject'/>
+				Message:<br>
+				<textarea id="overlay-message" rows='6' cols='30'>
+				
+				</textarea>
+				<br>
+				<div class='row-fluid' style='text-align:center' placeholder='test'>
+					<div class='span6'>
+						<a id='overlay-send'>Send</a>
+					</div>
+					<div class='span6'>
+						<a id='overlay-cancel'>Cancel</a>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
 
         <!-- js -->
         <script type="text/javascript" src="js/main/main.js"></script>
@@ -86,5 +112,10 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-    </body>
+     
+     	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+     	
+     
+        
+     </body>
 </html>
