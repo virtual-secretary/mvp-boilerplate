@@ -10,7 +10,7 @@ define([
         //VIEWS
         
         //TEMPLATES
-        "text!tpl/footer.mustache"
+        "text!tpl/Footer.mustache"
 ], function(
 		$, Mustache, Marionette,
 		tpl	){

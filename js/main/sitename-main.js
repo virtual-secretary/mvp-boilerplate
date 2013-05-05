@@ -13,7 +13,7 @@ require.config({
 		backbone: "lib/backbone/backbone",
 		mustache: "lib/mustache/mustache",
 		marionette : "/lib/marionette/marionette.min",
-		"backbone.babysitter" : "/lib/backbone.babysitter/backbone.babysitter",
+		"backbone.babysitter" : "/lib/backbone.babysitter/Backbone.babysitter",
 		"backbone.wreqr" : "/lib/backbone.Wreqr/Backbone.Wreqr",
 		"bootstrap" : "/lib/bootstrap/bootstrap.min"
 	},
